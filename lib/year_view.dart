@@ -10,6 +10,8 @@ class YearView extends StatelessWidget {
     this.todayColor,
     this.monthNames,
     this.onMonthTap,
+    this.selectedDates,
+    this.selectedDatesColor,
   });
 
   final BuildContext context;
@@ -17,7 +19,11 @@ class YearView extends StatelessWidget {
   final Color todayColor;
   final List<String> monthNames;
   final Function onMonthTap;
+  final List<DateTime> selectedDates;
+  final Color selectedDatesColor;
+
   double get horizontalMargin => 16.0;
+
   double get monthViewPadding => 8.0;
 
   Widget buildYearMonths(BuildContext context) {
@@ -27,14 +33,15 @@ class YearView extends StatelessWidget {
     for (int month = 1; month <= DateTime.monthsPerYear; month++) {
       monthRowChildren.add(
         MonthView(
-          context: context,
-          year: year,
-          month: month,
-          padding: monthViewPadding,
-          todayColor: todayColor,
-          monthNames: monthNames,
-          onMonthTap: onMonthTap,
-        ),
+            context: context,
+            year: year,
+            month: month,
+            padding: monthViewPadding,
+            todayColor: todayColor,
+            monthNames: monthNames,
+            onMonthTap: onMonthTap,
+            selectedDates: selectedDates,
+            selectedDatesColor: selectedDatesColor),
       );
 
       if (month % 3 == 0) {

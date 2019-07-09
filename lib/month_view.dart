@@ -13,6 +13,8 @@ class MonthView extends StatelessWidget {
     this.todayColor,
     this.monthNames,
     this.onMonthTap,
+    this.selectedDates,
+    this.selectedDatesColor
   });
 
   final BuildContext context;
@@ -22,6 +24,8 @@ class MonthView extends StatelessWidget {
   final Color todayColor;
   final List<String> monthNames;
   final Function onMonthTap;
+  final List<DateTime> selectedDates;
+  final Color selectedDatesColor;
 
   Widget buildMonthDays(BuildContext context) {
     final List<Row> dayRows = <Row>[];
@@ -32,11 +36,19 @@ class MonthView extends StatelessWidget {
 
     for (int day = 2 - firstWeekdayOfMonth; day <= daysInMonth; day++) {
       final bool isToday = dateIsToday(DateTime(year, month, day));
+      bool isInSelectedDates = false;
+      if(selectedDates!=null && selectedDates.isNotEmpty) {
+        isInSelectedDates = dateIsInArray(
+            DateTime(year, month, day), selectedDates);
+      }
+
       dayRowChildren.add(
         DayNumber(
           day: day,
           isToday: isToday,
           todayColor: todayColor,
+            isInSelectedDates:isInSelectedDates,
+          selectedDatesColor:selectedDatesColor
         ),
       );
 

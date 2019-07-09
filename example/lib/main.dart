@@ -30,11 +30,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // Required properties
           context: context,
           initialDate: DateTime.now(),
-          firstDate: DateTime.now().subtract(Duration(days: 5 * 365)),
+          firstDate: DateTime.now().subtract(Duration(days: 1 * 365)),
           lastDate: DateTime.now(),
-
           // Optional properties
           todayColor: Colors.blue,
+          selectedDates: _generateDatesSelected(),
+          selectedDatesColor: Colors.red,
           monthNames: const <String>[
             'Jan',
             'Feb',
@@ -53,5 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  List<DateTime> _generateDatesSelected() {
+    return List<DateTime>.generate(10, (index) {
+      DateTime.now().add(Duration(days: index)).toString();
+      return DateTime.now().add(Duration(days: index));
+    });
   }
 }

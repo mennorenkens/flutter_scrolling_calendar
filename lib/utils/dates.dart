@@ -4,6 +4,16 @@ bool dateIsToday(DateTime date) {
   return date.isAtSameMomentAs(DateTime(now.year, now.month, now.day));
 }
 
+/// Checks if the date is in array.
+bool dateIsInArray(DateTime date, List<DateTime> dates) {
+  for(var i=0;i<dates.length;i++){
+    if (dates[i].day == date.day && dates[i].month == date.month && dates[i].year == date.year) {
+      return true;
+    }
+  }
+  return false;
+}
+
 /// Gets the number of days for the given month,
 /// by taking the next month on day 0 and getting the number of days.
 int getDaysInMonth(int year, int month) {
