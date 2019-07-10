@@ -6,15 +6,15 @@ class DayNumber extends StatelessWidget {
     @required this.day,
     this.isToday,
     this.todayColor = Colors.blue,
-    this.isInSelectedDates,
-    this.selectedDatesColor = Colors.red,
+    this.isInhighlightedDates,
+    this.highlightedDatesColor = Colors.red,
   });
 
   final int day;
   final bool isToday;
   final Color todayColor;
-  final bool isInSelectedDates;
-  final Color selectedDatesColor;
+  final bool isInhighlightedDates;
+  final Color highlightedDatesColor;
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +44,9 @@ class DayNumber extends StatelessWidget {
         borderRadius: BorderRadius.circular(size / 2),
       );
     };
-    if(isInSelectedDates){
+    if(isInhighlightedDates){
       return BoxDecoration(
-        color: selectedDatesColor,
+        color: highlightedDatesColor,
         borderRadius: BorderRadius.circular(size / 2),
       );
     }

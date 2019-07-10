@@ -10,8 +10,8 @@ class YearView extends StatelessWidget {
     this.todayColor,
     this.monthNames,
     this.onMonthTap,
-    this.selectedDates,
-    this.selectedDatesColor,
+    this.highlightedDates,
+    this.highlightedDatesColor,
   });
 
   final BuildContext context;
@@ -19,8 +19,8 @@ class YearView extends StatelessWidget {
   final Color todayColor;
   final List<String> monthNames;
   final Function onMonthTap;
-  final List<DateTime> selectedDates;
-  final Color selectedDatesColor;
+  final List<DateTime> highlightedDates;
+  final Color highlightedDatesColor;
 
   double get horizontalMargin => 16.0;
 
@@ -40,8 +40,8 @@ class YearView extends StatelessWidget {
             todayColor: todayColor,
             monthNames: monthNames,
             onMonthTap: onMonthTap,
-            selectedDates: selectedDates,
-            selectedDatesColor: selectedDatesColor),
+            highlightedDates: highlightedDates,
+            highlightedDatesColor: highlightedDatesColor),
       );
 
       if (month % 3 == 0) {

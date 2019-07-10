@@ -34,8 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
           lastDate: DateTime.now(),
           // Optional properties
           todayColor: Colors.blue,
-          selectedDates: _generateDatesSelected(),
-          selectedDatesColor: Colors.red,
+          highlightedDates: _generateHighlightedDates(),
+          highlightedDatesColor: Colors.red,
           monthNames: const <String>[
             'Jan',
             'Feb',
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  List<DateTime> _generateDatesSelected() {
+  List<DateTime> _generateHighlightedDates() {
     return List<DateTime>.generate(10, (index) {
       DateTime.now().add(Duration(days: index)).toString();
       return DateTime.now().add(Duration(days: index));
