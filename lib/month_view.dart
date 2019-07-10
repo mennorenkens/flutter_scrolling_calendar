@@ -36,9 +36,9 @@ class MonthView extends StatelessWidget {
 
     for (int day = 2 - firstWeekdayOfMonth; day <= daysInMonth; day++) {
       final bool isToday = dateIsToday(DateTime(year, month, day));
-      bool isInhighlightedDates = false;
+      bool isInHighlightedDates = false;
       if(highlightedDates!=null && highlightedDates.isNotEmpty) {
-        isInhighlightedDates = dateIsInArray(
+        isInHighlightedDates = dateIsInArray(
             DateTime(year, month, day), highlightedDates);
       }
 
@@ -47,7 +47,7 @@ class MonthView extends StatelessWidget {
           day: day,
           isToday: isToday,
           todayColor: todayColor,
-            isInhighlightedDates:isInhighlightedDates,
+            isInHighlightedDates:isInHighlightedDates,
           highlightedDatesColor:highlightedDatesColor
         ),
       );

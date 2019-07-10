@@ -6,14 +6,14 @@ class DayNumber extends StatelessWidget {
     @required this.day,
     this.isToday,
     this.todayColor = Colors.blue,
-    this.isInhighlightedDates,
+    this.isInHighlightedDates,
     this.highlightedDatesColor = Colors.red,
   });
 
   final int day;
   final bool isToday;
   final Color todayColor;
-  final bool isInhighlightedDates;
+  final bool isInHighlightedDates;
   final Color highlightedDatesColor;
 
   @override
@@ -29,7 +29,7 @@ class DayNumber extends StatelessWidget {
         day < 1 ? '' : day.toString(),
         textAlign: TextAlign.center,
         style: TextStyle(
-          color: isToday ? Colors.white : Colors.black87,
+          color: isToday || isInHighlightedDates ? Colors.white : Colors.black87,
           fontSize: screenSize(context) == ScreenSizes.small ? 8.0 : 10.0,
           fontWeight: FontWeight.normal,
         ),
@@ -44,7 +44,7 @@ class DayNumber extends StatelessWidget {
         borderRadius: BorderRadius.circular(size / 2),
       );
     };
-    if(isInhighlightedDates){
+    if(isInHighlightedDates){
       return BoxDecoration(
         color: highlightedDatesColor,
         borderRadius: BorderRadius.circular(size / 2),
