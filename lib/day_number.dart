@@ -35,4 +35,22 @@ class DayNumber extends StatelessWidget {
       ),
     );
   }
+
+
+  Decoration _getDecoration(double size){
+    if(isCurrentDate){
+      return BoxDecoration(
+        color: currentDateColor,
+        borderRadius: BorderRadius.circular(size / 2),
+      );
+    };
+    if(isInHighlightedDates){
+      return BoxDecoration(
+        color: highlightedDatesColor,
+        borderRadius: BorderRadius.circular(size / 2),
+      );
+    }
+    return null;
+  }
+
 }

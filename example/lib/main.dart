@@ -32,7 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
           initialDate: DateTime.now(),
           firstDate: DateTime.now().subtract(Duration(days: 5 * 365)),
           lastDate: DateTime.now(),
-
           // Optional properties
           currentDateColor: Colors.blue,
           highlightedDates: _generateHighlightedDates(),
@@ -56,4 +55,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  List<DateTime> _generateHighlightedDates() {
+    return List<DateTime>.generate(10, (index) {
+      DateTime.now().add(Duration(days: index)).toString();
+      return DateTime.now().add(Duration(days: index));
+    });
+  }
+
 }
