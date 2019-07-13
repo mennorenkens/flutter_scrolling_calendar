@@ -10,7 +10,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
     @required this.initialDate,
     @required this.firstDate,
     @required this.lastDate,
-    this.todayColor,
+    this.currentDateColor,
     this.monthNames,
     this.onMonthTap,
     this.highlightedDates,
@@ -32,7 +32,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
   final DateTime initialDate;
   final DateTime firstDate;
   final DateTime lastDate;
-  final Color todayColor;
+  final Color currentDateColor;
   final List<String> monthNames;
   final Function onMonthTap;
   final List<DateTime> highlightedDates;
@@ -46,13 +46,14 @@ class _ScrollingYearsCalendarState extends State<ScrollingYearsCalendar> {
   /// Gets a widget with the view of the given year.
   YearView _getYearView(int year) {
     return YearView(
-        context: context,
-        year: year,
-        todayColor: widget.todayColor,
-        monthNames: widget.monthNames,
-        onMonthTap: widget.onMonthTap,
+      context: context,
+      year: year,
+      currentDateColor: widget.currentDateColor,
+      monthNames: widget.monthNames,
+      onMonthTap: widget.onMonthTap,
         highlightedDates: widget.highlightedDates,
-        highlightedDatesColor: widget.highlightedDatesColor);
+        highlightedDatesColor: widget.highlightedDatesColor
+    );
   }
 
   @override
