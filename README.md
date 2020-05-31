@@ -1,7 +1,7 @@
 <p align="center"><img src="screenshots/screenshot.png" height="400"></p>
 
-[![Starware](https://img.shields.io/badge/Starware-%E2%AD%90-black?labelColor=%23f9b00d)](https://github.com/zepfietje/starware)
 [![Pub Version](https://img.shields.io/pub/v/scrolling_years_calendar)](https://pub.dev/packages/scrolling_years_calendar)
+[![Starware](https://img.shields.io/badge/Starware-%E2%AD%90-black?labelColor=%23f9b00d)](https://github.com/zepfietje/starware)
 
 # Flutter Scrolling Calendar 🗓
 
