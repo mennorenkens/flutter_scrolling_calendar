@@ -42,8 +42,8 @@ class YearView extends StatelessWidget {
           highlightedDates: highlightedDates,
           highlightedDateColor: highlightedDateColor,
           monthNames: monthNames,
-          onMonthTap: onMonthTap,
-          monthTitleStyle: monthTitleStyle,
+          onTap: onMonthTap,
+          titleStyle: monthTitleStyle,
         ),
       );
 

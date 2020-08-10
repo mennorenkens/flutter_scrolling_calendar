@@ -14,8 +14,8 @@ class MonthView extends StatelessWidget {
     this.highlightedDates,
     this.highlightedDateColor,
     this.monthNames,
-    this.onMonthTap,
-    this.monthTitleStyle,
+    this.onTap,
+    this.titleStyle,
   });
 
   final BuildContext context;
@@ -26,8 +26,8 @@ class MonthView extends StatelessWidget {
   final List<DateTime> highlightedDates;
   final Color highlightedDateColor;
   final List<String> monthNames;
-  final Function onMonthTap;
-  final TextStyle monthTitleStyle;
+  final Function onTap;
+  final TextStyle titleStyle;
 
   Color getDayNumberColor(DateTime date) {
     Color color;
@@ -87,7 +87,7 @@ class MonthView extends StatelessWidget {
           MonthTitle(
             month: month,
             monthNames: monthNames,
-            monthTitleStyle: monthTitleStyle,
+            style: titleStyle,
           ),
           Container(
             margin: const EdgeInsets.only(top: 8.0),
@@ -100,12 +100,12 @@ class MonthView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return onMonthTap == null
+    return onTap == null
         ? Container(
             child: buildMonthView(context),
           )
         : FlatButton(
-            onPressed: () => this.onMonthTap(year, month),
+            onPressed: () => onTap(year, month),
             padding: const EdgeInsets.all(0.0),
             child: buildMonthView(context),
           );

@@ -5,7 +5,7 @@ class MonthTitle extends StatelessWidget {
   const MonthTitle({
     @required this.month,
     this.monthNames,
-    this.monthTitleStyle = const TextStyle(
+    this.style = const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.w600,
     ),
@@ -13,14 +13,14 @@ class MonthTitle extends StatelessWidget {
 
   final int month;
   final List<String> monthNames;
-  final TextStyle monthTitleStyle;
+  final TextStyle style;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Text(
         getMonthName(month, monthNames: monthNames),
-        style: monthTitleStyle,
+        style: style,
         maxLines: 1,
         overflow: TextOverflow.fade,
         softWrap: false,
