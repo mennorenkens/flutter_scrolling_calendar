@@ -12,6 +12,7 @@ class YearView extends StatelessWidget {
     this.highlightedDateColor,
     this.monthNames,
     this.onMonthTap,
+    this.monthTitleStyle,
   });
 
   final BuildContext context;
@@ -21,6 +22,8 @@ class YearView extends StatelessWidget {
   final Color highlightedDateColor;
   final List<String> monthNames;
   final Function onMonthTap;
+  final TextStyle monthTitleStyle;
+
   double get horizontalMargin => 16.0;
   double get monthViewPadding => 8.0;
 
@@ -40,6 +43,7 @@ class YearView extends StatelessWidget {
           highlightedDateColor: highlightedDateColor,
           monthNames: monthNames,
           onMonthTap: onMonthTap,
+          monthTitleStyle: monthTitleStyle,
         ),
       );
 

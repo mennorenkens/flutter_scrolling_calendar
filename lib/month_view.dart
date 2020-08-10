@@ -15,6 +15,7 @@ class MonthView extends StatelessWidget {
     this.highlightedDateColor,
     this.monthNames,
     this.onMonthTap,
+    this.monthTitleStyle,
   });
 
   final BuildContext context;
@@ -26,6 +27,7 @@ class MonthView extends StatelessWidget {
   final Color highlightedDateColor;
   final List<String> monthNames;
   final Function onMonthTap;
+  final TextStyle monthTitleStyle;
 
   Color getDayNumberColor(DateTime date) {
     Color color;
@@ -85,6 +87,7 @@ class MonthView extends StatelessWidget {
           MonthTitle(
             month: month,
             monthNames: monthNames,
+            monthTitleStyle: monthTitleStyle,
           ),
           Container(
             margin: const EdgeInsets.only(top: 8.0),

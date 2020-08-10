@@ -15,6 +15,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
     this.highlightedDateColor,
     this.monthNames,
     this.onMonthTap,
+    this.monthTitleStyle,
   })  : assert(context != null),
         assert(initialDate != null),
         assert(firstDate != null),
@@ -41,6 +42,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
   final Color highlightedDateColor;
   final List<String> monthNames;
   final Function onMonthTap;
+  final TextStyle monthTitleStyle;
 
   @override
   _ScrollingYearsCalendarState createState() => _ScrollingYearsCalendarState();
@@ -57,6 +59,7 @@ class _ScrollingYearsCalendarState extends State<ScrollingYearsCalendar> {
       highlightedDateColor: widget.highlightedDateColor,
       monthNames: widget.monthNames,
       onMonthTap: widget.onMonthTap,
+      monthTitleStyle: widget.monthTitleStyle,
     );
   }
 
