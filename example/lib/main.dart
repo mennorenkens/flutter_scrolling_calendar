@@ -59,6 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
             'Dec',
           ],
           onMonthTap: (int year, int month) => print('Tapped $month/$year'),
+          monthTitleStyle: TextStyle(
+              fontSize: 16, fontWeight: FontWeight.bold, color: Colors.teal),
         ),
       ),
     );
