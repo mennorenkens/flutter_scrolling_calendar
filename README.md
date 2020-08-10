@@ -1,4 +1,9 @@
-<p align="center"><img src="screenshots/screenshot.png" height="400"></p>
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/mennorenkens/flutter_scrolling_calendar/master/screenshots/screenshot.png"
+    height="400"
+  >
+</p>
 
 [![Pub Version](https://img.shields.io/pub/v/scrolling_years_calendar)](https://pub.dev/packages/scrolling_years_calendar)
 [![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware)
