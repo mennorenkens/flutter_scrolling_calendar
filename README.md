@@ -14,11 +14,10 @@ A customizable calendar widget to easily scroll through the years.
 - Choose the color of the current day indicator.
 - Override the default month names.
 
-## Contributors
+## Maintainers
 
 - [Menno Renkens](https://github.com/mennorenkens)
 - [Zep Fietje](https://github.com/zepfietje)
-- [Dutch Coding Company](https://github.com/DutchCodingCompany)
 
 ## Starware
 
