@@ -8,17 +8,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Scrolling Years Calendar',
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class HomePage extends StatelessWidget {
   List<DateTime> getHighlightedDates() {
     return List<DateTime>.generate(
       10,
@@ -34,14 +29,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ScrollingYearsCalendar(
-          // Required properties
+          // Required parameters
           context: context,
           initialDate: DateTime.now(),
           firstDate: DateTime.now().subtract(const Duration(days: 5 * 365)),
           lastDate: DateTime.now(),
           currentDateColor: Colors.blue,
 
-          // Optional properties
+          // Optional parameters
           highlightedDates: getHighlightedDates(),
           highlightedDateColor: Colors.deepOrange,
           monthNames: const <String>[
@@ -60,7 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
           onMonthTap: (int year, int month) => print('Tapped $month/$year'),
           monthTitleStyle: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.bold, color: Colors.teal),
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.teal,
+          ),
         ),
       ),
     );
