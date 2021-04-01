@@ -27,7 +27,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
-  scrolling_years_calendar:
+  scrolling_years_calendar_nullsafety:
     dependency: "direct main"
     description:
       path: ".."

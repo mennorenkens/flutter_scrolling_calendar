@@ -1,16 +1,17 @@
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/mennorenkens/flutter_scrolling_calendar/master/screenshots/screenshot.png"
+    src="https://raw.githubusercontent.com/marcosneivanery/flutter_scrolling_calendar/master/screenshots/screenshot.png"
     height="400"
   >
 </p>
 
-[![Pub Version](https://img.shields.io/pub/v/scrolling_years_calendar)](https://pub.dev/packages/scrolling_years_calendar)
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware)
+[![Pub Version](https://img.shields.io/pub/v/scrolling_years_calendar_nullsafety)](https://pub.dev/packages/scrolling_years_calendar_nullsafety)
 
-# Flutter Scrolling Calendar
+# Flutter Scrolling Calendar Null Safety
 
 A customizable calendar widget to easily scroll through the years.
+Forked from:
+https://github.com/mennorenkens/flutter_scrolling_calendar/
 
 ## Features
 

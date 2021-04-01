@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scrolling_years_calendar/scrolling_years_calendar.dart';
+import 'package:scrolling_years_calendar_nullsafety/scrolling_years_calendar.dart';
 
 void main() => runApp(MyApp());
 
