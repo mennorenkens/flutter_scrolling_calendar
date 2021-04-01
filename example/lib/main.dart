@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
             'Dec',
           ],
           onMonthTap: (int year, int month) => print('Tapped $month/$year'),
-          monthTitleStyle: TextStyle(
+          monthTitleStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Colors.blue,

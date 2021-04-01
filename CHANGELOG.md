@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-nullsafety.1] - 2021-03-31
+
+### Fixed
+
+- Migrating to null-safe.
+
 ## [1.3.1] - 2020-08-10
 
 ### Fixed
