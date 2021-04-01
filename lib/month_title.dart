@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:scrolling_years_calendar/utils/dates.dart';
+import 'package:scrolling_years_calendar_nullsafety/utils/dates.dart';
 
 class MonthTitle extends StatelessWidget {
   const MonthTitle({
-    @required this.month,
+    required this.month,
     this.monthNames,
     this.style = const TextStyle(
       fontSize: 18,
@@ -12,8 +12,8 @@ class MonthTitle extends StatelessWidget {
   });
 
   final int month;
-  final List<String> monthNames;
-  final TextStyle style;
+  final List<String>? monthNames;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {

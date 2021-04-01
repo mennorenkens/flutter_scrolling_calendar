@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:scrolling_years_calendar/utils/screen_sizes.dart';
+import 'package:scrolling_years_calendar_nullsafety/utils/screen_sizes.dart';
 
 class DayNumber extends StatelessWidget {
   const DayNumber({
-    @required this.day,
+    required this.day,
     this.color,
   });
 
   final int day;
-  final Color color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
